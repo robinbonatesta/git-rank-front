@@ -3,9 +3,8 @@ var vm = this;
 vm.title = "Login";
 
 /* User name */
-vm.username = /*User*/
-vm.password = /*Pass*/
-
+vm.username = 'x';
+vm.password = 'x';
 
 
 
