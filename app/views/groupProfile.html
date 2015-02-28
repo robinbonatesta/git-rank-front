@@ -17,9 +17,22 @@
 <!-- Need to add ng-controller="userController" -->
 <div class="row text-center">
   <h1>{{group.name}} hacksu</h1>
-  <h2>Search:</h2>
-  <input type="text" ng-model="main.searchInput">
 </div>
-<div class="row text-center">
   
-</div>  
+<div class="row text-center">
+  <div class="small-4 small-centered columns">
+    <label> Search:
+      <input type="text" ng-model="main.searchInput">
+    </label>
+  </div>
+
+  <h3>Members in {{group.name}}:</h3>
+  <ol>
+    <li>
+      {{member.name}} <span class="label">{{member.score}} 545</span> Paul
+    </li>
+    <li ng-repeat="member in group.members | filter:main.searchInput | orderBy:main.order.key">
+      {{member.name}} <span class="label">{{member.score}} 545</span> Paul
+    </li>
+  </ol>    
+</div> 
