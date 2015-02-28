@@ -1,0 +1,15 @@
+.panel{
+
+  width: 10rem;
+  display: inline-block;
+  vertical-align: text-top;
+  
+}
+
+li{
+  
+  list-style-position:inside;
+  list-style-type: none;
+  text-align: center;
+
+}
