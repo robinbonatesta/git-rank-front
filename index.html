@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="git-rank">
+<html>
 <head>
   <title>git-rank</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -10,8 +10,9 @@
   <script src="bower_components/foundation/js/foundation.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="app/app.js"></script>
 </head>
-<body>
+<body data-ng-app="app">
 
 
   <!-------------------- Nav Bar -------------------------->
@@ -32,8 +33,7 @@
     </section>
   </nav>
   
-
-  <div ng-controller="loginController" class="row text-center">
+  <div class="row text-center">
     <h1>Welcome to git-rank.</h1>
     <h4>See where you stand within your community and rise to the top. </h4>
     <a href="#" id="login" class="button round centered"> <i class="fa fa-github"></i> Login with Github</a> {{1+3}}
