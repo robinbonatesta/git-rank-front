@@ -1,0 +1,45 @@
+<!-------------------- Nav Bar -------------------------->
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="#">git-rank</a></h1>
+      </li>
+    </ul>
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li class="has-dropdown">
+          <a href="#">Groups</a>
+          <ul class="dropdown">
+            <li><a href="#">Create</a></li>
+            <li><a href="#">View</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Logout</a></li>
+
+      </ul>
+    </section>
+  </nav>
+
+<!-- Need to add ng-controller="userController" -->
+<div class="row text-center">
+  <h1>Hi, Paul{{user.name}} </h1>
+</div>
+<div class="row text-center">
+  <div class="panel radius" id="score_card">
+    <h1>Score:</h1>
+    <h3>{{user.score}} 545</h3>
+  </div>
+  <div class="panel radius" id="groups">
+    <h1>Groups:</h1>
+    <ul>
+    <li ng-repeat="group in user.groups | orderBy:user.group.name">
+      <h3><a href="#">{{group.name}}hackathons</a></h3>
+    </li>
+    <li>
+      <h3><a href="#">{{group.name}}hacksu</a></h3>
+    </li>
+  </ul>
+  </div>
+</div>
+  

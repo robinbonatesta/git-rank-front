@@ -1,6 +1,6 @@
 .panel{
 
-  width: 10rem;
+  width: 15rem;
   display: inline-block;
   vertical-align: text-top;
   
@@ -11,5 +11,12 @@ li{
   list-style-position:inside;
   list-style-type: none;
   text-align: center;
+
+}
+
+h3, a{
+
+  color: #000;
+  margin-left: -5px
 
 }
