@@ -1,0 +1,13 @@
+{
+  "name": "git-rank-front",
+  "version": "0.0.0",
+  "homepage": "https://github.com/robinbonatesta/git-rank-front",
+  "authors": [
+    "Robin Bonatesta <robinbonatesta@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "~4.3.0"
+  }
+}
