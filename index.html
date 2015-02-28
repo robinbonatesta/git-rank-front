@@ -24,18 +24,34 @@
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
-        <li><a href="#">Login</a></li>
-
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Logout</a></li>
       </ul>
     </section>
   </nav>
 
-
-  <div ng-controller="loginController" class="row text-center">
-    <h1>Welcome to git-rank.</h1>
-    <h4>See where you stand within your community and rise to the top. </h4>
-    <a href="https://github.com/login/oauth/authorize?scope=user&client_id=60035510643b2f88570b" id="login" class="button round centered"> <i class="fa fa-github"></i> Login with Github</a>
+  <!-- Need to add ng-controller="userController" -->
+  <div class="row large-6 columns center text-center">
+    <h1>{{group.name}} hacksu</h1>
+    </div>
   </div>
+  <div class="row text-center">
+    <div class="small-4 small-centered columns">
+      <label> Search:
+        <input type="text" ng-model="main.searchInput">
+      </label>
+    </div>
+    
+    <h3>Members in {{group.name}}:</h3>
+    <ol>
+      <li>
+        {{member.name}} <span class="label">{{member.score}} 545</span> Paul
+      </li>
+      <li ng-repeat="member in group.members | filter:main.searchInput | orderBy:main.order.key">
+        {{member.name}} <span class="label">{{member.score}} 545</span> Paul
+      </li>
+    </ol>    
+  </div>  
   
 </body>
 </html>

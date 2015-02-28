@@ -5,14 +5,16 @@
   vertical-align: text-top;
   
 }
+/*
 
-li{
+ul li{
   
   list-style-position:inside;
   list-style-type: none;
   text-align: center;
 
 }
+*/
 
 h3, a{
 
