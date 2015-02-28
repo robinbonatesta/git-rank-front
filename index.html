@@ -11,10 +11,13 @@
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
   <script src="app/app.js"></script>
+  <script src="app/controllers/group.ctrl.js"></script>
+  <script src="app/controllers/login.ctrl.js"></script>
+  <script src="app/controllers/profile.ctrl.js"></script>
 </head>
 <body data-ng-app="app">
 
-  <!-------------------- Nav Bar -------------------------->
+    <!-------------------- Nav Bar -------------------------->
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
       <li class="name">
@@ -24,22 +27,19 @@
     <section class="top-bar-section">
       <!-- Right Nav Section -->
       <ul class="right">
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Logout</a></li>
+        <li><a href="#">Login</a></li>
+
       </ul>
     </section>
   </nav>
 
-  <!-- Need to add ng-controller="userController" -->
-  <div class="row large-6 columns center text-center">
-    <h1>{{group.name}} hacksu</h1>
-  </div>
-  
-  <div class="row text-center">
+
+  <div ng-controller="loginController" class="row text-center">
     <h1>Welcome to git-rank.</h1>
     <h4>See where you stand within your community and rise to the top. </h4>
     <a href="https://github.com/login/oauth/authorize?scope=user&client_id=60035510643b2f88570b" id="login" class="button round centered"> <i class="fa fa-github"></i> Login with Github</a>
-  </div>  
+  </div>
+
   
 </body>
 </html>
