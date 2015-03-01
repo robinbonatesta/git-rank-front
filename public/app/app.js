@@ -20,6 +20,10 @@
                 controller: 'groupController',
                 templateUrl: 'app/views/groupProfile.html'
             })
+            .when('/login/:userId/groupList',{
+                controller: 'grouplistController',
+                templateUrl: 'app/views/groupList.html'
+            })
             //.otherwise( { redirectTo: '/user' } );
     });
     

@@ -1,5 +1,5 @@
 
-angular.module('app').controller("profileController", function($scope, $location){
+angular.module('app').controller("profileController", function($scope, $location, $http  ){
   var vm = this;
   vm.title = 'Profile';
 
@@ -26,6 +26,17 @@ angular.module('app').controller("profileController", function($scope, $location
     },
   ];
 
+
+//-------API CALLS----------//
+/*
+vm.score = '';
+
+vm.groups = [];
+
+$http
+.get('http://104.236.194.95/users/'+vm.username)
+.success(function(data))
+*/
 
 });
 
