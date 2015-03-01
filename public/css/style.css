@@ -1,24 +1,32 @@
 .panel{
 
-  width: 15rem;
-  display: inline-block;
-  vertical-align: text-top;
-  
+    width: 15rem;
+    display: inline-block;
+    vertical-align: text-top;
+
+}
+
+body{
+    background: #e3e3e3;
 }
 /*
 
 ul li{
-  
-  list-style-position:inside;
-  list-style-type: none;
-  text-align: center;
+
+list-style-position:inside;
+list-style-type: none;
+text-align: center;
 
 }
 */
 
 h3, a{
 
-  color: #000;
-  margin-left: -5px
+    color: #000;
+    margin-left: -5px
 
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
 }
