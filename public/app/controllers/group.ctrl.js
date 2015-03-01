@@ -2,7 +2,7 @@ angular.module('app').controller("groupController", function($scope, $http, $rou
 var vm = this;
 vm.title ="Groups";
 
-vm.group = {};
+vm.group;
 
 vm.members = [];
 
@@ -10,8 +10,8 @@ function get() {
 	$http
 		.get('http://104.236.194.95/groups/'+$routeParams.name)
 		.success(function (data) {
-			console.log(data);
 			vm.members = data.users;
+			vm.group = data.name;
 		})
 		.error(function (data) {
 			console.log(data);
