@@ -11,10 +11,10 @@
         <!-- Right Nav Section -->
         <ul class="right">
           <li class="has-dropdown">
-            <a href="#">Groups</a>
+            <a href="#login/:userId/groups">Groups</a>
             <ul class="dropdown">
-              <li><a href="#">Create</a></li>
-              <li><a href="#">View</a></li>
+              <li><a href="#login/:userId/groups">Create</a></li>
+              <li><a href="#login/:userId/groups">View</a></li>
             </ul>
           </li>
           <li><a href="#">Logout</a></li>
@@ -34,7 +34,7 @@
       <h1>Groups:</h1>
       <ul>
       <li ng-repeat="group in main.groups | orderBy:main.group.name">
-        <h3><a href="#"> {{group.name}}</a></h3>
+        <h3><a href="#login/:userId/groups"> {{group.name}}</a></h3>
       </li>
     </ul>
     </div>
