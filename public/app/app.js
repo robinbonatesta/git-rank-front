@@ -16,7 +16,7 @@
                 controller: 'profileController',
                 templateUrl: 'app/views/userProfile.html'
             })
-            .when('/groups', {
+            .when('/login/:userId/groups', {
                 controller: 'groupController',
                 templateUrl: 'app/views/groupProfile.html'
             })
