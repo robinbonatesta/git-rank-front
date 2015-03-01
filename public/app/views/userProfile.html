@@ -1,43 +1,43 @@
 <div ng-controller="profileController as main">
 
-  <!-------------------- Nav Bar -------------------------->
+    <!-------------------- Nav Bar -------------------------->
     <nav class="top-bar" data-topbar role="navigation">
-      <ul class="title-area">
-        <li class="name">
-          <h1><a href="/#/login/">git-rank <i class="fa fa-diamond"></i></a></h1>
-        </li>
-      </ul>
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li class="has-dropdown">
-            <a href="/#/groups">Groups</a>
-            <ul class="dropdown">
-              <li><a href="/#/groups/create">Create</a></li>
-              <li><a href="/#/groups/view">View</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Logout</a></li>
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="/#/login/">git-rank <i class="fa fa-diamond"></i></a></h1>
+            </li>
         </ul>
-      </section>
+        <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+                <li class="has-dropdown">
+                    <a href="/#/groups">Groups</a>
+                    <ul class="dropdown">
+                        <li><a href="/#/groups/create">Create</a></li>
+                        <li><a href="/#/groups/view">View</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </section>
     </nav>
 
-  <div class="row text-center">
-    <h1>Hi, {{main.name}} </h1>
-  </div>
-  <div class="row text-center">
-    <div class="panel radius" id="score_card">
-      <h1>Score:</h1>
-      <h3>{{main.score}}</h3>
+    <div class="row text-center">
+        <h1>Hi, {{main.name}} </h1>
     </div>
-    <div class="panel radius" id="groups">
-      <h1>Groups:</h1>
-      <ul>
-      <li ng-repeat="group in main.groups | orderBy:main.group.name">
-        <h3><a href="#login/:userId/groups"> {{group.name}}</a></h3>
-      </li>
-    </ul>
+    <div class="row text-center">
+        <div class="panel radius" id="score_card">
+            <h1>Score:</h1>
+            <h3>{{main.score}}</h3>
+        </div>
+        <div class="panel radius" id="groups">
+            <h1>Groups:</h1>
+            <ul>
+                <li ng-repeat="group in main.groups | orderBy:main.group.name">
+                    <h3><a href="#login/:userId/groups"> {{main.groups}}</a></h3>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 
 </div>
