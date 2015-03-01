@@ -11,13 +11,13 @@
       <!-- Right Nav Section -->
       <ul class="right">
         <li class="has-dropdown">
-          <a href="user/:userId/groups">Groups</a>
+          <a href="/#/groups">Groups</a>
           <ul class="dropdown">
-            <li><a ng-click="showForm()">Create</a></li>
-            <li><a href="#">View</a></li>
+            <li><a href="/#/groups/create">Create</a></li>
+            <li><a href="/#/groups/view">View</a></li>
           </ul>
         </li>
-        <li><a href="#">Profile</a></li>
+        <li><a href="/#/login">Profile</a></li>
         <li><a href="#">Logout</a></li>
       </ul>
     </section>
@@ -27,7 +27,7 @@
 <div class="row text-center">
   <h1><a href="#"> {{main.group.name}} </a> </h1>
 </div>
-  
+
 <div class="row text-center">
   <div class="small-4 small-centered columns">
     <label> Search:
@@ -37,17 +37,17 @@
 
   <h3>Members in: <a href="">{{main.group.name}}</a></h3>
   <ol>
-    <li ng-repeat="member in main.members | filter:main.searchInput | orderBy:main.order.key">
-      {{member.name}} <span class="label">{{member.score}}</span>
+    <li ng-repeat="member in main.members | filter:main.searchInput | orderBy:'score':true">
+      {{member.username}} <span class="label">{{member.score}}</span>
     </li>
-  </ol>  
-  
+  </ol>
+
   <!-- Form to Add Group -->
   <!-- Automatically hidden, shows when add group is clicked above  in nav -->
-  <form ng-hide="hideForm" name="group.addForm" ng-submit="group.addGroup()">
-    <p>Name: <input type="text" ng-model="group.new.name" required /> </p>
+  <form ng-hide="hideForm" name="main.addForm" ng-submit="main.addMember()">
+    <p>Name: <input type="text" ng-model="main.new.name" required /> </p>
     <button>Add</button>
-  </form>  
-  
-  </div> 
+  </form>
+
+  </div>
 </div>

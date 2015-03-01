@@ -1,42 +1,35 @@
-angular.module('app').controller("groupController", function($scope){
+angular.module('app').controller("groupController", function($scope, $http, $routeParams){
 var vm = this;
 vm.title ="Groups";
 
-vm.group = {
-	name:'hacksu',
-};
+vm.group = {};
 
-vm.members = [{
-	name:'Paul',
-	score:'544',
-},
-{
-	name:'matt',
-	score:'500',
-},
-];
+vm.members = [];
 
-/*vm.orders = [
-{
-	id:0,
-	title:'Name',
-	key:'name',
-},
-{
-	id:1,
-	title:'Score',
-	key:'score',
-},
-];
-*/
-
+function get() {
+	$http
+		.get('http://104.236.194.95/groups/'+$routeParams.name)
+		.success(function (data) {
+			console.log(data);
+			vm.members = data.users;
+		})
+		.error(function (data) {
+			console.log(data);
+		});
+}
+get();
 
 vm.new = {};
 vm.addMember = function(){
-	vm.main.member.push(vm.new);
-	vm.new = {};
+	$http
+		.put('http://104.236.194.95/groups/'+$routeParams.name+'/join/'+vm.new.name)
+		.success(function (data) {
+			get();
+			vm.new = {};
+		})
+		.error(function (data) {
+			console.log(data);
+		});
 };
-
-console.log('name:', vm.group)
 
 });

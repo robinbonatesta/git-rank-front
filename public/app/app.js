@@ -1,30 +1,24 @@
 (function() {
-    
+
     var app = angular.module('app', ['ngRoute']);
-    
+
     app.config(function($routeProvider) {
         $routeProvider
             .when('/', {
-                controller:'controllers/profile.ctrl.js',
                 templateUrl:'app/views/login.html'
-            }) 
+            })
             .when('/login', {
-                controller: 'loginController',
                 templateUrl: 'app/views/login.html',
             })
-            .when('/login/:userId', {
-                controller: 'profileController',
+            .when('/login/:username', {
                 templateUrl: 'app/views/userProfile.html'
             })
-            .when('/login/:userId/groups', {
-                controller: 'groupController',
+            .when('/groups/:name', {
                 templateUrl: 'app/views/groupProfile.html'
             })
-            .when('/login/:userId/groupList',{
-                controller: 'grouplistController',
+            .when('/groups',{
                 templateUrl: 'app/views/groupList.html'
-            })
-            //.otherwise( { redirectTo: '/user' } );
+            });
     });
-    
+
 }());
