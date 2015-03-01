@@ -3,7 +3,8 @@ var vm = this;
 vm.title = "Login";
 
 
-var username = $location.path('/username').search({key: username});
+var seg = $location.path().split('/');
+var username = seg[1];
 
 //Storing the local Data.
 localStorage.setItem('username', username);
