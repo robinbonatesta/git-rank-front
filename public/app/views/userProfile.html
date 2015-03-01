@@ -4,7 +4,7 @@
     <nav class="top-bar" data-topbar role="navigation">
         <ul class="title-area">
             <li class="name">
-                <h1><a href="/#/login/">git-rank <i class="fa fa-diamond"></i></a></h1>
+                <h1><a href="/#/login/{{name}}">{{name}} git-rank <i class="fa fa-diamond"></i></a></h1>
             </li>
         </ul>
         <section class="top-bar-section">
@@ -34,7 +34,7 @@
             <h1>Groups:</h1>
             <ul>
                 <li ng-repeat="group in main.groups | orderBy:main.group.name">
-                    <h3><a href="#login/:userId/groups"> {{main.groups}}</a></h3>
+                    <h3><a href="/#/groups/{{group}}"> {{group}}</a></h3>
                 </li>
             </ul>
         </div>
