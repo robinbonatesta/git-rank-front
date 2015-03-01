@@ -6,18 +6,18 @@
         $routeProvider
             .when('/', {
                 controller:'controllers/profile.ctrl.js',
-                templateURL:'app/views/login.html'
+                templateUrl:'app/views/login.html'
             }) 
             .when('/login', {
-                controller: 'controllers/login.ctrl.js',
+                controller: 'loginController',
                 templateUrl: 'app/views/login.html',
             })
-            .when('/user', {
-                controller: 'controllers/profile.ctrl.js',
+            .when('/login/:userId', {
+                controller: 'profileController',
                 templateUrl: 'app/views/userProfile.html'
             })
             .when('/groups', {
-                controller: 'controllers/group.ctrl.js',
+                controller: 'groupController',
                 templateUrl: 'app/views/groupProfile.html'
             })
             //.otherwise( { redirectTo: '/user' } );
